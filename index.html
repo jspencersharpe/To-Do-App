@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US" ng-app="toDo">
+<html lang="en-US" ng-app="toDoApp">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +7,13 @@
   <title>To Do</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" ng-controller="ToDoController as todoCtrl">
       <h1>To Do</h1>
     <form>
-      <label>Name</label><input type="text">
-      <label>Description</label><input type="text">
-      <label>Done By</label><input type="text">
-      <button>Add Task</button>
+      <label>Name</label><input type="text" ng-model="todoCtrl.newTask.name">
+      <label>Description</label><input type="text" ng-model="todoCtrl.newTask.desc">
+      <label>Done By</label><input type="date" ng-model="todoCtrl.newTask.due">
+      <button ng-click="todoCtrl.addNewTask()">Add Task</button>
    </form>
    <table>
      <thead>
@@ -25,13 +25,16 @@
        </tr>
        </thead>
        <tbody>
-        <tr>
-         <td></td>
-         <td></td>
-         <td></td>
+       <tr ng-repeat="task in todoCtrl.tasks">
+          <td>{{task.name}}</td>
+          <td>{{task.desc}}</td>
+          <td>{{task.due}}</td>
+          <td><button ng-click="todoCtrl.removeToDo(task)">DELETE</button</td>
        </tr>
        </tbody>
      </table>
     </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/main.js"></script>
    </body>
   </html>
