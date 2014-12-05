@@ -2,25 +2,9 @@
   "use strict";
 
   angular.module('toDoApp', [])
-    .controller('ToDoController', function(){
+    .controller('ToDoController', function($http){
       var vm = this;
-      vm.tasks = [
-      {
-        name: 'Make this app',
-        desc: 'Make toDo app in Angular',
-        due: 'December 5th, 2014'
-      },
-      {
-        name: 'Read about JS',
-        desc: 'read books and blogs',
-        due: 'December 25th, 2014'
-      },
-      {
-        name: 'Get a good Job',
-        desc: 'JS or .net would be great',
-        due: 'March 27th, 2015'
-      }
-      ];
+      vm.tasks = 
 
   vm.addNewTask = function(){
      vm.tasks.push(vm.newTask);
