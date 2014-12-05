@@ -32,14 +32,15 @@
        <tr ng-repeat="task in todoCtrl.tasks">
           <td>{{task.name}}</td>
           <td>{{task.desc}}</td>
-          <td>{{task.due}}</td>
+          <td>{{task.due | date}}</td>
           <td><button ng-click="todoCtrl.removeToDo(task)">DELETE</button</td>
        </tr>
        </tbody>
      </table>
-    </div>
+    </div> 
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>   
     <script src="js/main.js"></script>
    </body>
   </html>

@@ -27,6 +27,7 @@ input, label {
 input {
   height: 1em;
   max-width: 90%;
+  font-size: 1.3em;
 }
 
 form {
