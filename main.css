@@ -14,9 +14,18 @@ table {
   margin-left: 40px;
   padding: 30px;
   background-color: rgb(219, 210, 125);
-  border-radius: 20px;
+  border-radius: 10px;
   width: 1000px;
   clear: both;
+}
+
+form input#add-task {
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  padding: 5px;
+  height: 1.7em;
+  background-color: rgb(76, 140, 144);
 }
 
 input, label {
@@ -35,7 +44,7 @@ form {
   height: 330px;
   max-width: 330px;
   background-color: rgb(151, 143, 79);
-  border-radius: 30px;
+  border-radius: 10px;
   float: right;
   margin-right: 500px;
   margin-bottom: 15px;
@@ -59,10 +68,6 @@ button {
   font-size: 1.2em;
   border-radius: 10px;
   background-color: rgb(76, 140, 144);
-}
-
-form button {
-  margin-top: 10px;
 }
 
 h1 {
