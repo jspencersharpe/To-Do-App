@@ -41,12 +41,13 @@ input {
 
 form {
   padding-left: 30px;
+  padding-bottom: 20px;
   height: 330px;
   max-width: 330px;
   background-color: rgb(151, 143, 79);
   border-radius: 10px;
   float: right;
-  margin-right: 500px;
+  margin-right: 400px;
   margin-top: 30px;
   margin-bottom: 15px;
 }

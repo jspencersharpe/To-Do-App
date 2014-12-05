@@ -11,14 +11,21 @@
   </head>
   <body>
     <div class="container" ng-controller="ToDoController as todoCtrl">
-      <div id="top-part">
         <h1>To Do &#10003;</h1>
     <form name="myForm" ng-submit="myForm.$valid && todoCtrl.addNewTask()" novalidate>
-      <label>Name</label><input type="text" ng-model="todoCtrl.newTask.name" required>
-      <label>Description</label><input type="text" ng-model="todoCtrl.newTask.desc" required>
-      <label>Done By</label><input id="date" type="date" ng-model="todoCtrl.newTask.due" required>
-      <input id="add-task"type="submit" value="Add Task" ng-show="myForm.$valid"></input>
-     </div>
+      <div class="form-group" ng-class="{'has-error':!todoCtrl.newTask.name}">
+        <label class="control-label">Name</label>
+        <input class="form-control" type="text" ng-model="todoCtrl.newTask.name" required>
+      </div>
+      <div class="form-group" ng-class="{'has-error':!todoCtrl.newTask.desc}">
+        <label class="control-label">Description</label>
+        <input class="form-control" type="text" ng-model="todoCtrl.newTask.desc" required>
+      </div>
+      <div class="form-group" ng-class="{'has-error':!todoCtrl.newTask.due}">
+        <label class="control-label">Done By</label>
+        <input class="form-control" id="date" type="date" ng-model="todoCtrl.newTask.due" required>
+      </div>
+      <input id="add-task"type="submit" value="Add Task" ng-disabled="myForm.$invalid && disabled"></input>
    </form>
    <table>
      <thead>
