@@ -1,0 +1,14 @@
+{
+  "name": "To-Do-App",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jspencersharpe/To-Do-App",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

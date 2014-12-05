@@ -2,18 +2,22 @@
 <html lang="en-US" ng-app="toDoApp">
 <head>
   <meta charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Share:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="main.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>To Do</title>
+   <title>To Do</title>
   </head>
   <body>
     <div class="container" ng-controller="ToDoController as todoCtrl">
-      <h1>To Do</h1>
+      <div id="top-part">
+      <h1>To Do &#10003;</h1>
     <form>
       <label>Name</label><input type="text" ng-model="todoCtrl.newTask.name">
       <label>Description</label><input type="text" ng-model="todoCtrl.newTask.desc">
-      <label>Done By</label><input type="date" ng-model="todoCtrl.newTask.due">
+      <label>Done By</label><input id="date" type="date" ng-model="todoCtrl.newTask.due">
       <button ng-click="todoCtrl.addNewTask()">Add Task</button>
+     </div>
    </form>
    <table>
      <thead>
@@ -35,6 +39,7 @@
      </table>
     </div>
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/main.js"></script>
    </body>
   </html>
