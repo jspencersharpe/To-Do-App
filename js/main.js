@@ -8,17 +8,17 @@
       {
         name: 'Make this app',
         desc: 'Make toDo app in Angular',
-        due: 'Friday, December 5th'
+        due: 'December 5th, 2014'
       },
       {
         name: 'Read about JS',
         desc: 'read books and blogs',
-        due: 'Thursday, December 25th'
+        due: 'December 25th, 2014'
       },
       {
         name: 'Get a good Job',
         desc: 'JS or .net would be great',
-        due: 'Friday, March 27th'
+        due: 'March 27th, 2015'
       }
       ];
 
