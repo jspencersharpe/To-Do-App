@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <link href='http://fonts.googleapis.com/css?family=Share:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="main.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>To Do</title>
   <link href="bower_components/bootstrap/dist/bootstrap.min.css"</link>
+  <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <div class="container" ng-controller="ToDoController as todoCtrl">
         <h1>To Do &#10003;</h1>
-    <form name="myForm" ng-submit="myForm.$valid && todoCtrl.addNewTask()" novalidate>
+    <form class="col-xs-6 col-md-4" name="myForm" ng-submit="myForm.$valid && todoCtrl.addNewTask()" novalidate>
       <div class="form-group" ng-class="{'has-error':!todoCtrl.newTask.name}">
         <label class="control-label">Name</label>
         <input class="form-control" type="text" ng-model="todoCtrl.newTask.name" required>
@@ -25,7 +25,16 @@
         <label class="control-label">Done By</label>
         <input class="form-control" id="date" type="date" ng-model="todoCtrl.newTask.due" required>
       </div>
-      <input id="add-task"type="submit" value="Add Task" ng-disabled="myForm.$invalid && disabled"></input>
+      <div class="form-group">
+        <label class="control-label">Priority</label>
+        <select ng-model="todoCtrl.newTask.priority">
+          <option value="{{val}}" ng-repeat="(val, text) in todoCtrl.priorityOptions">
+          {{text}}
+        </option>
+      </select>
+      </div>
+     <input id="add-task"type="submit" value="Add Task" ng-disabled="myForm.$invalid"></input>
+
    </form>
    <table>
      <thead>
@@ -33,15 +42,17 @@
          <th>Task Name</th>
          <th>Task Description</th>
          <th>Done By</th>
+         <th>Priority</th>
          <th>Remove Task</th>
        </tr>
        </thead>
        <tbody>
-       <tr ng-repeat="task in todoCtrl.tasks">
+       <tr ng-repeat="(taskId, task) in todoCtrl.tasks">
           <td>{{task.name}}</td>
-          <td>{{task.desc}}</td>
+          <td id="description" >{{task.desc}}</td>
           <td>{{task.due | date}}</td>
-          <td><button ng-click="todoCtrl.removeToDo(task)">DELETE</button</td>
+          <td id="priority">{{task.priority}}</td>
+          <td><button ng-click="todoCtrl.removeToDo(taskId)">DELETE</button</td>
        </tr>
        </tbody>
      </table>
