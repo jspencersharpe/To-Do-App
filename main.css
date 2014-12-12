@@ -93,6 +93,9 @@ h1 {
     margin-right: 0;
     margin-left: 0;
   }
+  font {
+    font-size: 75%;
+  }
   th, td#description, td#priority {
     display: none;
   }
@@ -104,7 +107,10 @@ h1 {
     margin: 0;
     box-sizing: border-box;
     max-width: 400px;
+    font-size: 50%;
   }
-  
+  table button {
+    max-width: 50%;
+  }
 }
 
