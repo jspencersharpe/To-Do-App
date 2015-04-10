@@ -62,3 +62,51 @@ table {
   background-color: rgb(237, 237, 237);
   border-radius: 2px;
 }
+
+@media (max-width: 650px) {
+  .brand h1 {
+    font-size: 80px;
+  }
+
+  .logo {
+    max-width: 280px;
+  }
+
+  .brand {
+    padding-left: 300px;
+  }
+
+  table {
+    padding: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand h1 {
+    font-size: 60px;
+  }
+
+  .logo {
+    max-width: 230px;
+  }
+
+  .brand {
+    padding-left: 270px;
+  }
+
+  td, th, label {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 430px) {
+  .brand {
+    min-height: 180px;
+    padding-left: 200px;
+  }
+
+  .logo {
+    max-width: 200px;
+  }
+
+}
