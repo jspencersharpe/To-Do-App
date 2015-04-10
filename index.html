@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div class="container" ng-controller="ToDoController as todoCtrl">
-        <h1>To Do &#10003;</h1>
-    <form class="col-xs-6 col-md-4" name="myForm" ng-submit="myForm.$valid && todoCtrl.addNewTask()" novalidate>
+    <div class="container-fluid" ng-controller="ToDoController as todoCtrl">
+      <div class="title">
+        <h1 >To Do &#10003;</h1>        
+      </div>
+    <form name="myForm" ng-submit="myForm.$valid && todoCtrl.addNewTask()" novalidate>
       <div class="form-group" ng-class="{'has-error':!todoCtrl.newTask.name}">
         <label class="control-label">Name</label>
         <input class="form-control" type="text" ng-model="todoCtrl.newTask.name" required>
@@ -33,10 +35,9 @@
         </option>
       </select>
       </div>
-     <input id="add-task"type="submit" value="Add Task" ng-disabled="myForm.$invalid">
-
+     <input id="add-task" class="btn btn-success" type="submit" value="Add Task" ng-disabled="myForm.$invalid">
    </form>
-   <table>
+   <table class="table table-striped">
      <thead>
        <tr>
          <th>Task Name</th>
@@ -52,7 +53,7 @@
           <td id="description" >{{task.desc}}</td>
           <td>{{task.due | date}}</td>
           <td id="priority">{{task.priority}}</td>
-          <td><button ng-click="todoCtrl.removeToDo(taskId)">DELETE</button</td>
+          <td><button class="btn btn-danger" ng-click="todoCtrl.removeToDo(taskId)">DELETE</button</td>
        </tr>
        </tbody>
      </table>
