@@ -10,10 +10,14 @@
   <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div class="container-fluid" ng-controller="ToDoController as todoCtrl">
-      <div class="title">
-        <h1 >To Do &#10003;</h1>        
+  <header id="masthead">
+    <div class="container-fluid">
+      <div class="brand">
+        <h1 >&#10003; To Do</h1> 
       </div>
+    </div>
+  </header>
+    <div class="container-fluid" ng-controller="ToDoController as todoCtrl">
     <form name="myForm" ng-submit="myForm.$valid && todoCtrl.addNewTask()" novalidate>
       <div class="form-group" ng-class="{'has-error':!todoCtrl.newTask.name}">
         <label class="control-label">Name</label>
@@ -29,7 +33,7 @@
       </div>
       <div class="form-group">
         <label class="control-label">Priority</label>
-        <select ng-model="todoCtrl.newTask.priority">
+        <select class="form-control" ng-model="todoCtrl.newTask.priority">
           <option value="{{val}}" ng-repeat="(val, text) in todoCtrl.priorityOptions">
           {{text}}
         </option>

@@ -1,5 +1,14 @@
-.title {
-  background-color: rgba(255, 197, 10, 1);
-  border-radius: 25px;
-  padding: 5px;
+#masthead {
+  background-color: rgba(255, 197, 10, .8);
+  text-align: center;
+  padding: 30px;
+}
+
+form, table {
+  padding: 30px;
+}
+
+h1 {
+  color: rgb(235, 63, 32);
+  font-size: 4em;
 }
