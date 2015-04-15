@@ -1,7 +1,7 @@
 ;(function(){
   "use strict";
 
-  angular.module('toDoApp', [])
+  angular.module('toDoApp', ['ngRoute'])
     .controller('ToDoController', function($http){
       var vm = this;
 

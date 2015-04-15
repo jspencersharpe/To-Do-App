@@ -1,0 +1,24 @@
+<div class="col-xs-12 col-md-8">
+  <table class="table table-striped">
+   <thead>
+     <tr>
+      <th>Task Name</th>
+      <th>Task Description</th>
+      <th>Done By</th>
+      <th>Priority</th>
+     <th>Remove Task</th>
+    </tr>
+    </thead>
+    <tbody>
+     <tr ng-repeat="(taskId, task) in todoCtrl.tasks">
+       <td>{{task.name}}</td>
+       <td id="description" >{{task.desc}}</td>
+       <td>{{task.due | date}}</td>
+       <td id="priority">{{task.priority}}</td>
+       <td><button class="btn btn-danger" ng-click="todoCtrl.removeToDo(taskId)">DELETE</button</td>
+     </tr>
+    </tbody>
+  </table>
+</div> 
+
+

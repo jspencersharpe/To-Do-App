@@ -1,7 +1,7 @@
 ;(function(){
   'use strict';
 
-  angular.module('todoApp')
+  angular.module('toDoApp')
   .config(function($routeProvider){
     $routeProvider
     .when('/login', {
@@ -25,7 +25,7 @@
       private: true
     })
   })
-  .run(function($routeScope, authFactory){
+  .run(function($rootScope, authFactory){
     $rootScope.$on('$rootChangeStart', function(event, nextRoute, priorRoute){
       if (nextRoute.$$route && nextRoute.$$route.private) {
         authFactory.requireLogin();

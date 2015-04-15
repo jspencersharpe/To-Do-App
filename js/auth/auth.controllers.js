@@ -1,7 +1,7 @@
 ;(function(){
   'use strict';
 
-  angular.module('todoApp')
+  angular.module('toDoApp')
     .controller('ChangePasswordController', function($scope, $location, authFactory){
       var vm = this;
       vm.changePassword = function() {

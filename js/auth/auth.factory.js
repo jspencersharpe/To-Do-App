@@ -1,7 +1,7 @@
 ;(function(){
   'use strict';
 
-  angular.module('todoApp')
+  angular.module('toDoApp')
     .factory('authFactory', function($rootScope, $location, FIREBASE_URL){
       var factory = {};
         ref = new Firebase(FIREBASE_URL);
