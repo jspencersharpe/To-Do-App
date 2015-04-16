@@ -7,7 +7,7 @@
       vm.changePassword = function() {
         authFactory.changePassword(vm.oldPassword, vm.newPassword, function(){
           $location.path('/logout');
-          $scope.apply();
+          $scope.$apply();
         })
       };
     })
@@ -35,7 +35,7 @@
     .controller('LogoutController', function($scope, $location, authFactory){
       authFactory.logout(function(){
         $location.path('/login');
-        $scope.apply();
+        $scope.$apply();
       });
     })
 })();

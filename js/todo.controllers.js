@@ -14,7 +14,7 @@
     .controller('EditController', function($routeParams, todoFactory){
       var vm = this;
       var id = $routeParams.id;
-
+  
       todoFactory.getTodo(id, function(data){
         vm.newTask = data;
       });

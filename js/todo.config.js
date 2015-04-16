@@ -11,7 +11,7 @@
         private: true
       })
       .when('/todos/new', {
-        templateUrl: 'views/form.html',
+        templateUrl: 'views/table.html',
         controller: 'TodoController',
         controllerAs: 'todo',
         private: true
@@ -23,7 +23,7 @@
         private: true
       })
       .when('/todos/:id/edit', {
-        templateUrl: 'views/form.html',
+        templateUrl: 'views/table.html',
         controller: 'EditController',
         controllerAs: 'edit',
         private: true
