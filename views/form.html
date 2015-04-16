@@ -1,21 +1,21 @@
 <div class="wrapper col-xs-6 col-md-4">
-<form name="myForm" ng-submit="myForm.$valid && todoCtrl.addNewTask()" novalidate>
-      <div class="form-group" ng-class="{'has-error':!todoCtrl.newTask.name}">
+<form name="myForm" ng-submit="myForm.$valid && todo.addNewTask()" novalidate>
+      <div class="form-group" ng-class="{'has-error':!todo.newTask.name}">
         <label>Name</label>
-        <input class="form-control" type="text" ng-model="todoCtrl.newTask.name" required>
+        <input class="form-control" type="text" ng-model="todo.newTask.name" required>
       </div>
-      <div class="form-group" ng-class="{'has-error':!todoCtrl.newTask.desc}">
+      <div class="form-group" ng-class="{'has-error':!todo.newTask.desc}">
         <label>Description</label>
-        <input class="form-control" type="text" ng-model="todoCtrl.newTask.desc" required>
+        <input class="form-control" type="text" ng-model="todo.newTask.desc" required>
       </div>
-      <div class="form-group" ng-class="{'has-error':!todoCtrl.newTask.due}">
+      <div class="form-group" ng-class="{'has-error':!todo.newTask.due}">
         <label>Done By</label>
-        <input class="form-control" id="date" type="date" ng-model="todoCtrl.newTask.due" required>
+        <input class="form-control" id="date" type="date" ng-model="todo.newTask.due" required>
       </div>
       <div class="form-group">
         <label>Priority</label>
         <select class="form-control" ng-model="todoCtrl.newTask.priority">
-          <option value="{{val}}" ng-repeat="(val, text) in todoCtrl.priorityOptions">
+          <option value="{{val}}" ng-repeat="(val, text) in todo.priorityOptions">
           {{text}}
         </option>
       </select>

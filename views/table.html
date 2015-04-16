@@ -10,12 +10,15 @@
     </tr>
     </thead>
     <tbody>
-     <tr ng-repeat="(taskId, task) in todoCtrl.tasks">
+     <tr ng-repeat="(taskId, task) in todo.tasks">
        <td>{{task.name}}</td>
        <td id="description" >{{task.desc}}</td>
        <td>{{task.due | date}}</td>
        <td id="priority">{{task.priority}}</td>
-       <td><button class="btn btn-danger" ng-click="todoCtrl.removeToDo(taskId)">DELETE</button</td>
+       <td>
+         <a class="btn btn-primary" href="/#/todos/{{taskId}}/edit">Edit</a>         
+         <button class="btn btn-danger" ng-click="todo.removeToDo(taskId)">DELETE</button>
+       </td>
      </tr>
     </tbody>
   </table>

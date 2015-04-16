@@ -41,7 +41,7 @@
         });
       };
 
-      vm.removeTodo = function(){
+      vm.removeToDo = function(todoId){
         todoFactory.deleteTodo(todoId, function(){
           delete vm.tasks[todoId];
         });
