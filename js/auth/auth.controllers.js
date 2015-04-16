@@ -13,10 +13,11 @@
     })
     .controller('LoginController', function(authFactory, $scope, $location) {
       var vm = this;
+      
       vm.login = function() {
         authFactory.login(vm.email, vm.password, function(){
           $location.path('/todos');
-          $scope.apply();
+          $scope.$apply();
         });
       };
 
