@@ -19,12 +19,14 @@
     </div>
   </header>
   <div class="container-fluid">
-    <a class="btn btn-primary" href="/#/todos" ng-show="user">All Todos</a>
-    <a class="btn btn-primary" href="/#/todos/new" ng-show="user">New Todo</a>
-    <a class="btn btn-success" href="/#/login" ng-hide="user">Login</a>
-    <a class="btn btn-warning" href="/#/changepassword" ng-show="user">Change Password</a>
-    <a class="btn btn-danger" href="/#/logout" ng-show="user">Logout</a>
-    <div ng-view></div>  
+    <div class="navigation">
+      <a class="btn btn-primary" href="/#/todos" ng-show="user">All Todos</a>
+      <a class="btn btn-primary" href="/#/todos/new" ng-show="user">New Todo</a>
+      <a class="btn btn-success" href="/#/login" ng-hide="user">Login</a>
+      <a class="btn btn-warning" href="/#/changepassword" ng-show="user">Change Password</a>
+      <a class="btn btn-danger" href="/#/logout" ng-show="user">Logout</a>
+   <div ng-view></div> 
+    </div>
    </div> 
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>  
@@ -38,9 +40,9 @@
     <script src="js/constants.js"></script>    
     <script src="js/auth/auth.controllers.js"></script>
     <script src="js/auth/auth.routes.js"></script>
+    <script src="js/todo.config.js"></script>    
     <script src="js/auth/auth.factory.js"></script>    
     <script src="js/todo.controllers.js"></script>
     <script src="js/todo.factory.js"></script>
-    <script src="js/todo.config.js"></script>
    </body>
 </html>

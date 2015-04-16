@@ -9,6 +9,10 @@ header {
   display: block;
 }
 
+.navigation {
+  text-align: center;
+}
+
 .brand, .logo {
   display: block;
   position: absolute;
