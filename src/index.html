@@ -7,25 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>To Do</title>
   <link rel="stylesheet" href="lib/build.css">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-  <header id="masthead">
-    <div class="container">
+  <div class="container-fluid">
+    <header id="masthead">
       <div class="brand">
         <img src="assets/todo.png" class="logo" alt="To Do Icon">
         <h1>To Do</h1> 
       </div>
-    </div>
-  </header>
-  <div class="container-fluid">
+    </header>
+   <div class="container-fluid">
     <div class="navigation">
       <a class="btn btn-success" href="/#/login" ng-hide="user">Login</a>
       <a class="btn btn-warning" href="/#/changepassword" ng-show="user">Change Password</a>
       <a class="btn btn-danger" href="/#/logout" ng-show="user">Logout</a>
-   <div ng-view></div> 
+     <div ng-view></div> 
     </div>
    </div> 
+  </div>
     <script src="lib/build.js"></script>
     <script src="js/main.js"></script>
     <script src="js/main.config.js"></script>

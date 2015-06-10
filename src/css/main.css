@@ -1,0 +1,82 @@
+header {
+  display: block;
+  background-color: #ffc50a;
+  margin-bottom: 20px;
+  padding-bottom: 20px; }
+  header .brand {
+    position: relative;
+    padding-left: 400px;
+    min-height: 240px; }
+    @media screen and (max-width: 650px) {
+      header .brand {
+        padding-left: 300px; } }
+    @media screen and (max-width: 520px) {
+      header .brand {
+        padding-left: 270px; } }
+    @media screen and (max-width: 430px) {
+      header .brand {
+        min-height: 180px;
+        padding-left: 200px; } }
+    header .brand .logo {
+      display: block;
+      position: absolute;
+      left: -20px;
+      max-width: 320px; }
+      @media screen and (max-width: 650px) {
+        header .brand .logo {
+          max-width: 280px; } }
+      @media screen and (max-width: 520px) {
+        header .brand .logo {
+          max-width: 230px; } }
+      @media screen and (max-width: 430px) {
+        header .brand .logo {
+          max-width: 200px; } }
+    header .brand h1 {
+      color: #eb3f20;
+      font-size: 100px;
+      padding-top: 60px;
+      font-weight: bold;
+      display: inline-block;
+      white-space: nowrap;
+      letter-spacing: -0.04em; }
+      @media screen and (max-width: 650px) {
+        header .brand h1 {
+          font-size: 80px; } }
+      @media screen and (max-width: 520px) {
+        header .brand h1 {
+          font-size: 60px; } }
+
+div.navigation {
+  text-align: center; }
+
+div.wrapper {
+  padding: 20px;
+  background-color: #ededed;
+  border-radius: 2px; }
+
+/* table and forms */
+th {
+  font-size: 1.5em;
+  color: #28a320; }
+  @media screen and (max-width: 520px) {
+    th {
+      font-size: 1em; } }
+
+label {
+  font-size: 1.5em;
+  color: #4f8dc1; }
+  @media screen and (max-width: 520px) {
+    label {
+      font-size: 1em; } }
+
+td {
+  font-size: 1.5em; }
+  @media screen and (max-width: 520px) {
+    td {
+      font-size: 1em; } }
+
+table {
+  padding: 30px; }
+  @media (max-width: 650px) {
+    table {
+      padding: 0; } }
