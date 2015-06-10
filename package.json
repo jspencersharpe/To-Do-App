@@ -1,0 +1,19 @@
+{
+  "name": "To-Do-App",
+  "version": "1.0.0",
+  "description": "To-Do-App =========",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jspencersharpe/To-Do-App.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jspencersharpe/To-Do-App/issues"
+  },
+  "homepage": "https://github.com/jspencersharpe/To-Do-App"
+}
