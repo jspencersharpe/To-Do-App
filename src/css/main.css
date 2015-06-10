@@ -7,16 +7,16 @@ header {
     position: relative;
     padding-left: 400px;
     min-height: 240px; }
+    @media screen and (max-width: 700px) {
+      header .brand {
+        padding-left: 350px; } }
     @media screen and (max-width: 650px) {
       header .brand {
         padding-left: 300px; } }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 550px) {
       header .brand {
-        padding-left: 270px; } }
-    @media screen and (max-width: 430px) {
-      header .brand {
-        min-height: 180px;
-        padding-left: 200px; } }
+        padding-left: 0px;
+        text-align: center; } }
     header .brand .logo {
       display: block;
       position: absolute;
@@ -25,12 +25,25 @@ header {
       @media screen and (max-width: 650px) {
         header .brand .logo {
           max-width: 280px; } }
-      @media screen and (max-width: 520px) {
+      @media screen and (max-width: 550px) {
         header .brand .logo {
-          max-width: 230px; } }
+          max-width: 230px;
+          position: relative;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto; } }
+      @media screen and (max-width: 465px) {
+        header .brand .logo {
+          max-width: 215px; } }
       @media screen and (max-width: 430px) {
         header .brand .logo {
           max-width: 200px; } }
+      @media screen and (max-width: 375px) {
+        header .brand .logo {
+          max-width: 175px; } }
+      @media screen and (max-width: 320px) {
+        header .brand .logo {
+          max-width: 140px; } }
     header .brand h1 {
       color: #eb3f20;
       font-size: 100px;
@@ -42,9 +55,10 @@ header {
       @media screen and (max-width: 650px) {
         header .brand h1 {
           font-size: 80px; } }
-      @media screen and (max-width: 520px) {
+      @media screen and (max-width: 550px) {
         header .brand h1 {
-          font-size: 60px; } }
+          font-size: 60px;
+          padding-top: 0px; } }
 
 div.navigation {
   text-align: center; }
@@ -53,8 +67,17 @@ div.wrapper {
   padding: 20px;
   background-color: #ededed;
   border-radius: 2px; }
+  @media screen and (max-width: 800px) {
+    div.wrapper {
+      width: 100%; } }
 
 /* table and forms */
+@media screen and (max-width: 375px) {
+  div.list {
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 100%; } }
+
 th {
   font-size: 1.5em;
   color: #28a320; }
@@ -69,14 +92,19 @@ label {
     label {
       font-size: 1em; } }
 
-td {
+@media screen and (max-width: 375px) {
+  th.priority {
+    display: none; } }
+
+table tbody tr td.cell {
   font-size: 1.5em; }
   @media screen and (max-width: 520px) {
-    td {
+    table tbody tr td.cell {
       font-size: 1em; } }
+  @media screen and (max-width: 375px) {
+    table tbody tr td.cell {
+      padding: 0px; } }
 
-table {
-  padding: 30px; }
-  @media (max-width: 650px) {
-    table {
-      padding: 0; } }
+@media screen and (max-width: 375px) {
+  table tbody tr td.priority {
+    display: none; } }

@@ -23,24 +23,24 @@
       <input id="add-task" class="btn btn-success" type="submit" value="Add Task" ng-disabled="myForm.$invalid">
      </form>
 </div>
-<div class="col-xs-12 col-md-8">
+<div class="list col-xs-12 col-md-8">
   <table class="table table-striped">
    <thead>
      <tr>
       <th>Task Name</th>
       <th>Task Description</th>
       <th>Done By</th>
-      <th>Priority</th>
+      <th class="priority">Priority</th>
      <th>Remove Task</th>
     </tr>
     </thead>
     <tbody>
      <tr ng-repeat="(taskId, task) in todo.tasks">
-       <td>{{task.name}}</td>
-       <td id="description" >{{task.desc}}</td>
-       <td>{{task.due | date}}</td>
-       <td id="priority">{{task.priority}}</td>
-       <td>
+       <td class="cell">{{task.name}}</td>
+       <td class="cell" id="description" >{{task.desc}}</td>
+       <td class="cell">{{task.due | date}}</td>
+       <td class="cell priority">{{task.priority}}</td>
+       <td class="cell">
          <button class="btn btn-danger" ng-click="todo.removeToDo(taskId)">DELETE</button>
        </td>
      </tr>

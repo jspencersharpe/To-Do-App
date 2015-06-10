@@ -1,3 +1,6 @@
+$iphoneSix: 375px;
+$iphoneFive: 320px;
+
 header {
   display: block;
   background-color: rgba(255, 197, 10, 1);
@@ -8,9 +11,9 @@ header {
     position: relative;
     padding-left: 400px;
     min-height: 240px;
+    @media screen and (max-width: 700px) { padding-left: 350px; }
     @media screen and (max-width: 650px) { padding-left: 300px; }
-    @media screen and (max-width: 520px) { padding-left: 270px; }
-    @media screen and (max-width: 430px) { min-height: 180px; padding-left: 200px; }
+    @media screen and (max-width: 550px) { padding-left: 0px; text-align: center; }
 
     .logo {
       display: block;
@@ -18,8 +21,17 @@ header {
       left: -20px;
       max-width: 320px;
       @media screen and (max-width: 650px) { max-width: 280px; }
-      @media screen and (max-width: 520px) { max-width: 230px; }
+      @media screen and (max-width: 550px) { 
+        max-width: 230px; 
+        position: relative; 
+        text-align: center; 
+        margin-left: auto; 
+        margin-right: auto; 
+      }
+      @media screen and (max-width: 465px) { max-width: 215px; }
       @media screen and (max-width: 430px) { max-width: 200px; }
+      @media screen and (max-width: $iphoneSix) { max-width: 175px; }
+      @media screen and (max-width: $iphoneFive) { max-width: 140px; }
     }
 
     h1 {
@@ -31,7 +43,7 @@ header {
       white-space: nowrap;
       letter-spacing: -0.04em;  
       @media screen and (max-width: 650px) { font-size: 80px; }
-      @media screen and (max-width: 520px) { font-size: 60px; }
+      @media screen and (max-width: 550px) { font-size: 60px; padding-top: 0px; }
     }
   }
 }
@@ -44,9 +56,14 @@ div.wrapper {
   padding: 20px;
   background-color: rgb(237, 237, 237);
   border-radius: 2px;
+  @media screen and (max-width: 800px) { width: 100%; }
 }
 
 /* table and forms */ 
+div.list {
+  @media screen and (max-width: $iphoneSix) { margin-left: 0px; padding-left: 0px; width: 100%; }
+}
+
 th {
   font-size: 1.5em;
   color: rgb(40, 163, 32);
@@ -59,13 +76,22 @@ label {
   @media screen and (max-width: 520px) { font-size: 1em; }
 }
 
-td {
-  font-size: 1.5em;
-  @media screen and (max-width: 520px) { font-size: 1em; }
+th.priority {
+  @media screen and (max-width: $iphoneSix) { display: none; }        
 }
 
 table {
-  padding: 30px;
-  @media (max-width: 650px) { padding: 0; }
+  tbody {
+    tr {
+      td.cell {
+        font-size: 1.5em;
+        @media screen and (max-width: 520px) { font-size: 1em; }
+        @media screen and (max-width: $iphoneSix) { padding: 0px; }
+      }
+      td.priority {
+        @media screen and (max-width: $iphoneSix) { display: none; }
+      }
+    }
+  }
 }
 
